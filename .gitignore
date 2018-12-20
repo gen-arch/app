@@ -1,7 +1,7 @@
 *.log
 *.pid
 *.state
-vendor/
 *.lock
-
-
+tmp/
+log/
+vendor/
