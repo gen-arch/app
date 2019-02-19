@@ -12,7 +12,7 @@ end
 #default directory
 directory app_path
 #env mode
-environment 'production'
+environment ENV['RELATIVE_URL_ROOT']
 
 #service daemon
 daemonize

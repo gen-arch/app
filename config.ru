@@ -1,3 +1,6 @@
-require_relative "app"
+$:　<< File.join(__dir__, 'app', 'controllers')
+require "app"
 
-run Sinatra::Application
+url_root = ENV['RELATIVE_URL_ROOT'] || '/'
+
+map(url_root){ run App }
