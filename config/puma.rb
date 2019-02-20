@@ -1,4 +1,11 @@
 require "fileutils"
+require "yaml"
+env = YAML.load_file(File.join(__dir__, 'environment.yml'))
+
+ENV['RELATIVE_URL_ROOT'] = env['RELATIVE_URL_ROOT']
+ENV['APP_ENV']  = env['environment']
+ENV['APP_NAME'] = env['app']
+ENV['SERVER']   = "puma"
 
 #root path
 app_path = File.expand_path("..", __dir__)
@@ -12,7 +19,7 @@ end
 #default directory
 directory app_path
 #env mode
-environment ENV['RELATIVE_URL_ROOT']
+environment ENV['APP_ENV']
 
 #service daemon
 daemonize
