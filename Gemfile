@@ -1,4 +1,3 @@
-require "yaml"
 # frozen_string_literal: true
 
 source "https://rubygems.org"
@@ -10,5 +9,6 @@ gem "sinatra-contrib"
 gem "puma"
 
 group :development do
+  gem "rake"
   gem 'pry-byebug'
 end
