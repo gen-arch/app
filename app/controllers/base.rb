@@ -5,9 +5,8 @@ class Base < Sinatra::Base
   configure do
     set :server, ENV['SERVER'].to_sym
     set :root, ENV['APP_ROOT'] || File.expand_path('../../', __dir__)
-    set :public_folder, File.join(settings.root, 'app', 'assets')
+    set :public_folder, File.join(settings.root, 'app', 'aseets')
     set :views, File.join(settings.root, 'app', 'views')
-    puts settings.public_folder
   end
 
   configure :development do

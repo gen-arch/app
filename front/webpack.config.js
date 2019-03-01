@@ -6,7 +6,7 @@ module.exports = {
   // mode: 'production',
 	output: {
     filename: 'bundle.js',
-    path: __dirname + '/../app/assets/js',
+    path: __dirname + '/../app/aseets/js',
     publicPath: '/assets/'
 	},
 	devServer: {
