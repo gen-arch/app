@@ -1,15 +1,15 @@
 module.exports = {
   // モード値を production に設定すると最適化された状態で、
-	// development に設定するとソースマップ有効でJSファイルが出力される
-	entry: './src/index.js',
+  // development に設定するとソースマップ有効でJSファイルが出力される
+  entry: './src/main.ts',
   mode: 'development',
   // mode: 'production',
-	output: {
+  output: {
     filename: 'bundle.js',
     path: __dirname + '/../app/aseets/js',
     publicPath: '/assets/'
-	},
-	devServer: {
+  },
+  devServer: {
     contentBase: 'public',
     compress: true,
     port: 8080,
@@ -21,10 +21,19 @@ module.exports = {
         test: /\.(scss|css)$/,
         use: [
           'style-loader',
-					'css-loader',
-					'sass-loader'
+          'css-loader',
+          'sass-loader'
         ],
       },
+      {
+        test: /\.ts$/,
+        use: 'ts-loader'
+      },
     ],
+  },
+  resolve: {
+    extensions: [
+      '.ts'
+    ]
   }
 };
