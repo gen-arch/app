@@ -1,44 +1,47 @@
-require "fileutils"
-require "yaml"
+require 'fileutils'
+require 'yaml'
 env = YAML.load_file(File.join(__dir__, 'environment.yml'))
 
 ENV['RELATIVE_URL_ROOT'] = env['RELATIVE_URL_ROOT']
 ENV['APP_ENV']  = env['environment']
 ENV['APP_NAME'] = env['app']
-ENV['SERVER']   = "puma"
+ENV['SERVER']   = 'puma'
+ENV['APP_ROOT'] = File.expand_path('..', __dir__)
+ENV['BASIC_AUTH_USERNAME'] = env['basic']['user']
+ENV['BASIC_AUTH_PASSWORD'] = env['basic']['pass']
 
-#root path
-app_path = File.expand_path("..", __dir__)
-tmp_dirs = ["tmp/pids","tmp/sockets" ,"log"]
+# root path
+app_path = ENV['APP_ROOT']
+tmp_dirs = ['tmp/pids', 'tmp/sockets', 'log']
 
 tmp_dirs.each do |path|
   mk_path = File.join(app_path, path)
   FileUtils.mkdir_p(mk_path) unless Dir.exist?(mk_path)
 end
 
-#default directory
+# default directory
 directory app_path
-#env mode
+# env mode
 environment ENV['APP_ENV']
 
-#service daemon
-daemonize
+# service daemon
+# daemonize
 
-#process id file
+# process id file
 pidfile "#{app_path}/tmp/pids/puma.pid"
 
-#puma status file
+# puma status file
 state_path "#{app_path}/tmp/pids/puma.state"
 
-#stdout, stderr put file
-stdout_redirect "#{app_path}/log/app.log", "#{app_path}/log/app_err.log", true
+# stdout, stderr put file
+# stdout_redirect "#{app_path}/log/app.log", "#{app_path}/log/app_err.log", true
 
-#thread settting low, high
+# thread settting low, high
 threads 0, 16
 
-#socket type
-#bind 'tcp://0.0.0.0:9292' #=> tcp socket
-bind "unix:///#{app_path}/tmp/sockets/puma.sock"
+# socket type
+bind 'tcp://0.0.0.0:9292' #=> tcp socket
+# bind "unix:///#{app_path}/tmp/sockets/puma.sock"
 
-#pumactl
+# pumactl
 activate_control_app

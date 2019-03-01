@@ -1,7 +1,9 @@
-require_relative "app_base"
+require 'base'
+require 'slim'
 
-class App < AppBase
-  get "/" do
-    'hello world'
+class App < Base
+  get '/' do
+    puts settings.views
+    slim :index
   end
 end
