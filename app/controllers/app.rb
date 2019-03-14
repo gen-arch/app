@@ -3,6 +3,6 @@ require 'slim'
 
 class App < Base
   get '/' do
-    slim :index
+    send_file File.join(settings.public_folder, 'index.html')
   end
 end
