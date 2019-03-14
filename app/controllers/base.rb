@@ -3,10 +3,10 @@ require 'sinatra/reloader'
 
 class Base < Sinatra::Base
   configure do
-    set :server, ENV['SERVER'].to_sym
-    set :root, ENV['APP_ROOT'] || File.expand_path('../../', __dir__)
-    set :public_folder, File.join(settings.root, 'app', 'aseets')
-    set :views, File.join(settings.root, 'app', 'views')
+    set :server, :puma
+    set :root, File.expand_path('../../', __dir__)
+    set :public_folder, File.join(root, 'app', 'aseets')
+    set :views, File.join(root, 'app', 'views')
   end
 
   configure :development do

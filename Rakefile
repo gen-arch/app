@@ -1,5 +1,3 @@
-require "rake"
-
-namespace :genereter do
-  description "create default "
-end
+require 'sinatra/activerecord'
+require 'sinatra/activerecord/rake'
+require_relative "app/models/active_record"

@@ -1,6 +1,0 @@
-app: "app"
-environment: "development"
-RELATIVE_URL_ROOT: "/hoge"
-basic:
-  user: "hoge"
-  pass: "hogehoge"

@@ -1,17 +1,7 @@
 require 'fileutils'
-require 'yaml'
-env = YAML.load_file(File.join(__dir__, 'environment.yml'))
-
-ENV['RELATIVE_URL_ROOT'] = env['RELATIVE_URL_ROOT']
-ENV['APP_ENV']  = env['environment']
-ENV['APP_NAME'] = env['app']
-ENV['SERVER']   = 'puma'
-ENV['APP_ROOT'] = File.expand_path('..', __dir__)
-ENV['BASIC_AUTH_USERNAME'] = env['basic']['user']
-ENV['BASIC_AUTH_PASSWORD'] = env['basic']['pass']
 
 # root path
-app_path = ENV['APP_ROOT']
+app_path = File.expand_path('..', __dir__)
 tmp_dirs = ['tmp/pids', 'tmp/sockets', 'log']
 
 tmp_dirs.each do |path|
