@@ -4,5 +4,5 @@
 *.lock
 tmp/
 log/
-vendor/
+.bundle/
 node_modules/

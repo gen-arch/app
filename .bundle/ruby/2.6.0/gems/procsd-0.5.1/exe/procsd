@@ -1,6 +1,0 @@
-#!/usr/bin/env ruby
-
-require "procsd"
-require "procsd/cli"
-
-Procsd::CLI.start(ARGV)
