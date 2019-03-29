@@ -1,3 +1,2 @@
-require 'sinatra/activerecord'
-require 'sinatra/activerecord/rake'
-require_relative "app/models/active_record"
+# internal tasks
+load 'lib/tasks/setup.rake'

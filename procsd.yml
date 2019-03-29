@@ -1,6 +1,0 @@
-app: "sample_app"
-environment:
-  APP_ENV: "development"
-  RELATIVE_URL_ROOT: "/hoge"
-  BASIC_AUTH_USERNAME: "hoge"
-  BASIC_AUTH_PASSWORD: "hogehoge"
