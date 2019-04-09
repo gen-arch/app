@@ -8,10 +8,9 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 # sinatra
 gem 'sinatra'
 gem 'sinatra-contrib'
+gem 'sinatra-param'
+gem 'sinatra-cross_origin'
 gem 'rack-contrib'
-
-# sinatra view support
-# gem 'slim'
 
 # web-server
 gem 'puma'
@@ -23,7 +22,7 @@ gem 'sinatra-activerecord'
 
 # DB ---------------
 # mysql
-gem 'mysql2'
+# gem 'mysql2'
 
 # mongodb
 # gem 'mongoid'

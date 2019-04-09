@@ -1,0 +1,5 @@
+---
+app: app
+environment:
+  APP_ENV: development
+  RELATIVE_URL_ROOT: "/"
