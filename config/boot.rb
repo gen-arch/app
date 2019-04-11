@@ -14,8 +14,5 @@ module Boot
   end
 end
 
-def root
-  File.expand_path('..', __dir__)
-end
 
 Boot.create_dir
