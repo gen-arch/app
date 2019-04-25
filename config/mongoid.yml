@@ -1,0 +1,20 @@
+default: &default
+  database: <%= ENV['DATABASE'] %>
+  hosts:
+    - localhost:27017
+
+
+development:
+  clients:
+    default:
+      <<: *default
+
+test:
+  clients:
+    default:
+      <<: *default
+
+production:
+  clients:
+    default:
+      <<: *default

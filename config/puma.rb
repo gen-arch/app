@@ -1,6 +1,6 @@
 require 'fileutils'
-require_relative 'boot'
 require_relative 'environment'
+require_relative 'boot'
 
 # default directory
 directory root
@@ -19,9 +19,12 @@ stdout_redirect "#{root}/log/app.log", "#{root}/log/app_err.log", true
 threads 0, 16
 
 # socket type
-#
-bind "unix:///#{root}/tmp/sockets/puma.sock"
-bind 'tcp://0.0.0.0:4567' unless production?
+
+if production?
+  bind "unix:///#{root}/tmp/sockets/puma.sock"
+else
+  bind 'tcp://0.0.0.0:4567' unless production?
+end
 
 # pumactl
 activate_control_app
