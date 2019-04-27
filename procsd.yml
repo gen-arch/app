@@ -1,5 +1,5 @@
 ---
-app: app
+app: hotels_search
 environment:
   APP_ENV: development
-  RELATIVE_URL_ROOT: "/"
+  RELATIVE_URL_ROOT: "/hotels_search"

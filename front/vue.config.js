@@ -1,4 +1,4 @@
 module.exports = {
   outputDir: '../dist',
-  publicPath: "/hoge"
+  publicPath: "/hotels_search"
 }

@@ -21,20 +21,19 @@ gem 'sinatra-activerecord'
 
 
 # DB ---------------
-# mysql
-# gem 'mysql2'
 
 # mongodb
-# gem 'mongoid'
-# gem 'bson_ext'
-
-# sqlite
-# gem 'sqlite3'
+gem 'mongoid'
+gem 'bson_ext'
 # ------------------
 
 # support tool
 gem 'activesupport'
 gem 'procsd'
+
+#crawling
+gem 'nokogiri'
+
 
 # devlopment
 group :development do
