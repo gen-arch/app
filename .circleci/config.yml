@@ -48,6 +48,8 @@ workflows:
       - unko:
           filters:
             branches:
-              only: test
+              only:
+                - master
+                - test
 
 
