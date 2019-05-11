@@ -31,9 +31,13 @@ gem 'bson_ext'
 gem 'activesupport'
 gem 'procsd'
 
-#crawling
-gem 'nokogiri'
+# test
+gem 'rspec'
 
+group :test do
+  gem 'rspec'
+  gem 'rack-test'
+end
 
 # devlopment
 group :development do

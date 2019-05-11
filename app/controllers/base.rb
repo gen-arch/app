@@ -14,7 +14,7 @@ class Base < Sinatra::Base
     set :max_age, "1728000"
     set :expose_headers, ['Content-Type']
 
-    set :server, :puma
+    # set :server, :puma
     set :root, File.expand_path('../../', __dir__)
     set :public_folder, File.join(root, 'app', 'dist')
     set :views, File.join(root, 'app', 'dist')

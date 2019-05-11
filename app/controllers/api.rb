@@ -1,4 +1,4 @@
-require 'base'
+require_relative 'base'
 
 class Api < Base
   before do

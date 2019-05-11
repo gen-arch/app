@@ -1,4 +1,5 @@
 require 'sinatra/json'
+require_relative 'base'
 require_relative '../graphql/appschema'
 
 class Graphql < Base
