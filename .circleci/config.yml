@@ -18,7 +18,6 @@ jobs:
           name: run tests
           command: |
             bundle exec rspec spec/lib
-jobs:
   unko:
     docker:
       - image: circleci/ruby:2.6.2
