@@ -1,5 +1,6 @@
 # app
 sinatra template
+test
 
 ## setup
 ```
