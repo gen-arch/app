@@ -27,3 +27,12 @@ jobs:
           name: run tests
           command: |
             bundle exec rspec spec/lib
+
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - build:
+        filters:
+          branches:
+            only: master
