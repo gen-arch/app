@@ -1,0 +1,20 @@
+image: ruby:2.6.2
+
+variables:
+  CAP_USER: "deployer"
+  BUNDLE_CACHE: "vendor/bundle/"
+  RAILS_ENV: "test"
+
+stages:
+  - setup
+  - test
+
+rspec:
+  stage: setup
+  script:
+    -  bundle install
+
+rspec:
+  stage: test
+  script:
+    -  bundle exec rspec spec/lib
