@@ -6,15 +6,10 @@ variables:
   RAILS_ENV: "test"
 
 stages:
-  - setup
   - test
-
-install:
-  stage: setup
-  script:
-    -  bundle install
 
 rspec:
   stage: test
   script:
+    -  bundle install
     -  bundle exec rspec spec/lib
