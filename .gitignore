@@ -1,6 +1,7 @@
 *.log
 *.pid
 *.state
+*.lock
 tmp/
 log/
 .bundle/
