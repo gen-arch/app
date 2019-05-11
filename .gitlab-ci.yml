@@ -14,11 +14,12 @@ install:
   artifacts:
     paths:
     - .bundle/
-    -  Gemfile.lock
+    - Gemfile.lock
 
 rspec:
   stage: test
   script:
+    - bundle install
     - bundle exec rspec spec/lib
   dependencies:
     - install
