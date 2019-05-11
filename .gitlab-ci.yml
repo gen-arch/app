@@ -19,6 +19,7 @@ install:
 rspec:
   stage: test
   script:
+    - bundle install
     - bundle exec rspec spec/lib
   dependencies:
     - install
