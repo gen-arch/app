@@ -13,7 +13,8 @@ install:
     - bundle install --path .bundle
   artifacts:
     paths:
-    - .bundle
+    - .bundle/
+    -  Gemfile.lock
 
 rspec:
   stage: test
