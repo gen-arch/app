@@ -9,7 +9,7 @@ stages:
   - setup
   - test
 
-rspec:
+install:
   stage: setup
   script:
     -  bundle install
