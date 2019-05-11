@@ -20,7 +20,7 @@ jobs:
             bundle exec rspec spec/lib
   unko:
     docker:
-      - image: circleci/ruby:2.6.2
+      - image: ubuntu:16.04
 
     working_directory: ~/repo
 
@@ -28,14 +28,10 @@ jobs:
       - checkout
 
       - run:
-          name: install dependencies
+          name: put unko
           command: |
-            bundle install --jobs=4 --retry=3 --path vendor/bundle
+            echo 'うんこ〜〜〜〜〜〜〜〜〜!!'
 
-      - run:
-          name: run tests
-          command: |
-            bundle exec rspec spec/lib
 workflows:
   version: 2
 
@@ -49,7 +45,6 @@ workflows:
           filters:
             branches:
               only:
-                - master
                 - test
 
 
