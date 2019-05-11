@@ -28,6 +28,7 @@ class Base < Sinatra::Base
   end
 
   before do
+    cross_origin if development?
     request.script_name = ENV['RELATIVE_URL_ROOT'] || '/'
   end
 

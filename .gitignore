@@ -6,3 +6,4 @@ tmp/
 log/
 .bundle/
 node_modules/
+procsd.yml

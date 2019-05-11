@@ -2,8 +2,7 @@ require 'base'
 
 class Api < Base
   before do
-    cross_origin
     content_type :json
-    protected!
+    protected! if production?
   end
 end

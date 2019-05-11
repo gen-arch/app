@@ -19,7 +19,6 @@ stdout_redirect "#{root}/log/app.log", "#{root}/log/app_err.log", true
 threads 0, 16
 
 # socket type
-
 if production?
   bind "unix:///#{root}/tmp/sockets/puma.sock"
 else
