@@ -1,7 +1,7 @@
 $LOAD_PATH << File.join(__dir__, 'app')
-require 'contlloers/app'
-require 'contlloers/api'
-require 'contlloers/graphql'
+require 'controllers/app'
+require 'controllers/api'
+require 'controllers/graphql'
 
 url_root = ENV['RELATIVE_URL_ROOT'] || '/'
 

@@ -1,5 +1,8 @@
 ---
 app: hotels_search
 environment:
-  APP_ENV: development
+  RACK_ENV: development
   RELATIVE_URL_ROOT: "/hotels_search"
+  DATABASE:
+  BASIC_AUTH_USERNAME:
+  BASIC_AUTH_PASSWORD:

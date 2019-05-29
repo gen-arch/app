@@ -1,2 +1,2 @@
-app: bundle exec puma -e $APP_ENV
+app: bundle exec puma -e $RACK_ENV
 db: docker-compose up
