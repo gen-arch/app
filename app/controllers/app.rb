@@ -1,8 +1,10 @@
-require_relative 'base'
+require "sinatra/base"
 
-class App < Base
+
+class App < Sinatra::Base
   get '/' do
     "hello world"
   end
+
   run! if app_file == $0
 end
